@@ -63,7 +63,6 @@ class _StatisticsPageState extends State<StatisticsPage> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 20),
-              // Display letters split evenly in 7 columns
               Wrap(
                 alignment: WrapAlignment.start,
                 spacing: 20,

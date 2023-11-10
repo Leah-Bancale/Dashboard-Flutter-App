@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Assuming you have a LoginScreen
+import 'login_screen.dart'; 
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -8,8 +8,6 @@ class SettingsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Settings'),
         backgroundColor: Colors.redAccent,
-
-        // Add a back button to navigate back to the Home
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -20,7 +18,6 @@ class SettingsPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Navigate to the Login Page
             Navigator.pushReplacementNamed(context, '/login');
           },
           style: ButtonStyle(

@@ -1,9 +1,7 @@
-// login_screen.dart
-
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
-  final VoidCallback onLogin; // Add the onLogin parameter
+  final VoidCallback onLogin; 
 
   LoginScreen({required this.onLogin});
 
@@ -14,10 +12,10 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool _isPasswordVisible = false; // Track the visibility of the password
+  bool _isPasswordVisible = false;
 
   bool isValidCredentials(String username, String password) {
-    return username == '' && password == '';
+    return username == 'Leah@gmail.com' && password == 'Leah';
   }
 
   void _handleLogin(BuildContext context) {
@@ -25,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     String password = _passwordController.text;
 
     if (isValidCredentials(username, password)) {
-      widget.onLogin(); // Call the onLogin callback
+      widget.onLogin(); 
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -69,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: EdgeInsets.symmetric(horizontal: 50.0),
               child: TextField(
                 controller: _passwordController,
-                obscureText: !_isPasswordVisible, // Toggle password visibility
+                obscureText: !_isPasswordVisible, 
                 decoration: InputDecoration(
                   labelText: 'Enter your password',
                   suffixIcon: IconButton(
